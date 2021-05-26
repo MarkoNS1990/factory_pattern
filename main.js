@@ -7,6 +7,7 @@ const factoryPattern = (name,age)=>{
 }
 
 const whoDat = factoryPattern('Marko',30)
+console.log(whoDat)
 console.log(whoDat.name);
 console.log(whoDat.age);
 whoDat.info()
@@ -40,3 +41,18 @@ if (years > 5){
 }
 
 console.log(doubleYears)
+
+// Closure
+
+const myFunction = () =>{
+  const age = 30
+
+    const sayMyAge = () => {
+        return `My age is ${age}.`
+    }
+    return {sayMyAge}
+}
+
+const myFunc = myFunction()
+// myFunc.age //error
+ console.log(myFunc.sayMyAge())
