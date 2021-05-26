@@ -55,4 +55,19 @@ const myFunction = () =>{
 
 const myFunc = myFunction()
 // myFunc.age //error
- console.log(myFunc.sayMyAge())
+  console.log(myFunc.sayMyAge()) // Can get age variable even though we are not returning it from factory function
+
+  const myFunctionTwo = () =>{
+      const {sayMyAge} = myFunction()
+      const age2 = 31
+      
+      
+    const sayMyAgeTwo = () =>{
+          return  `My age 2 is ${age2}`
+      }
+      return {sayMyAge,sayMyAgeTwo}
+  }
+
+  const myFuncTwo = myFunctionTwo()
+  console.log(myFuncTwo.sayMyAge())
+  console.log(myFuncTwo.sayMyAgeTwo())
