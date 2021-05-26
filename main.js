@@ -10,3 +10,10 @@ const whoDat = factoryPattern('Marko',30)
 console.log(whoDat.name);
 console.log(whoDat.age);
 whoDat.info()
+
+// trick for logging as an object
+const name = 'Marko'
+const age = 30
+const color = 'red'
+
+console.log({name,age,color})
